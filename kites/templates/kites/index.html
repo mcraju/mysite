@@ -1,0 +1,22 @@
+How are you {{name}}<br>
+You got {{marks}} marks<br>
+{% if schools %}
+    And you studied in
+    <ul>
+    {% for each in schools %}
+        <li>
+            {{each}}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    The displayed marks are fake.
+{% endif %}
+You are working in
+<ul>
+    {% for each in Working %}
+        <li>
+            You worked in company {{forloop.counter}} {{each.company}} and you got {{each.exp}} Experience
+        </li>
+    {% endfor %}
+</ul>
